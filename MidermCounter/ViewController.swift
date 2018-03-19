@@ -16,7 +16,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         countLabel.text = String(count)
         countLabelTwo.text = String(countTwo)
         countLabelThree.text = String(countThree)
@@ -29,6 +28,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func minusPressed(_ sender: Any) {
+        
         count = count - 1
         countLabel.text = String(count)
         
