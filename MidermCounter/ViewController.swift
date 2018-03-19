@@ -1,25 +1,35 @@
-//
-//  ViewController.swift
-//  MidermCounter
-//
-//  Created by Sara Lundberg on 3/18/18.
-//  Copyright © 2018 Sara Lundberg. All rights reserved.
-//
+
 
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var countLabel: UILabel!
+    var count = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        countLabel.text = String(count)
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func plusPressed(_ sender: Any) {
+        
+        count = count + 1
+        countLabel.text = String(count)
     }
-
-
+    
+    @IBAction func minusPressed(_ sender: Any) {
+        count = count - 1
+        countLabel.text = String(count)
+        
+    }
+    
+    @IBAction func clearPressed(_ sender: Any) {
+        
+        count = 0
+        countLabel.text = String(count)
+    }
+    
 }
 

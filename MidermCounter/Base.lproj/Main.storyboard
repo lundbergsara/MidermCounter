@@ -18,40 +18,73 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZo-jW-SL4">
-                                <rect key="frame" x="316" y="69" width="32" height="59"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rZo-jW-SL4">
+                                <rect key="frame" x="316" y="69" width="43" height="59"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="O6F-et-xYB"/>
+                                    <constraint firstAttribute="width" constant="43" id="Q5M-RA-kDi"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" How many coups of coffee today? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87G-eu-220">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" How many coups of coffee today? " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87G-eu-220">
                                 <rect key="frame" x="16" y="40" width="262" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.84659518379999998" blue="0.99480523529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="bil-ly-OD3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="black" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvo-2O-2K1">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wvo-2O-2K1">
                                 <rect key="frame" x="16" y="83" width="68" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="q1N-O1-6uJ"/>
+                                </constraints>
                                 <state key="normal" title="One more"/>
+                                <connections>
+                                    <action selector="plusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8NJ-nP-trk"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQH-i1-PwI">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NQH-i1-PwI">
                                 <rect key="frame" x="104" y="83" width="153" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Oops just spilled it out"/>
+                                <connections>
+                                    <action selector="minusPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yMu-oI-0mt"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJQ-6u-STZ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lJQ-6u-STZ">
                                 <rect key="frame" x="16" y="130" width="233" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="I have been lying, clear everything"/>
+                                <connections>
+                                    <action selector="clearPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gYo-GB-sMM"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lJQ-6u-STZ" firstAttribute="top" secondItem="87G-eu-220" secondAttribute="bottom" constant="69" id="0O7-WX-gSP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rZo-jW-SL4" secondAttribute="trailing" constant="16" id="C6a-sX-fd2"/>
+                            <constraint firstItem="wvo-2O-2K1" firstAttribute="top" secondItem="87G-eu-220" secondAttribute="bottom" constant="22" id="GyX-GR-HhY"/>
+                            <constraint firstItem="NQH-i1-PwI" firstAttribute="leading" secondItem="wvo-2O-2K1" secondAttribute="trailing" constant="20" id="IrK-4i-n6B"/>
+                            <constraint firstItem="rZo-jW-SL4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="49" id="SA6-AS-wEG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="87G-eu-220" secondAttribute="trailing" constant="97" id="TVA-aC-eVT"/>
+                            <constraint firstItem="87G-eu-220" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Y5I-zk-Rpn"/>
+                            <constraint firstItem="NQH-i1-PwI" firstAttribute="top" secondItem="87G-eu-220" secondAttribute="bottom" constant="22" id="b1B-Q3-dqQ"/>
+                            <constraint firstItem="lJQ-6u-STZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="i5k-XS-hHm"/>
+                            <constraint firstItem="87G-eu-220" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="k6i-OV-TkO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lJQ-6u-STZ" secondAttribute="trailing" constant="126" id="mG1-0m-LPK"/>
+                            <constraint firstItem="NQH-i1-PwI" firstAttribute="leading" secondItem="wvo-2O-2K1" secondAttribute="trailing" constant="20" id="rQx-KH-ZIL"/>
+                            <constraint firstItem="wvo-2O-2K1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="snS-97-er2"/>
+                            <constraint firstItem="rZo-jW-SL4" firstAttribute="leading" secondItem="NQH-i1-PwI" secondAttribute="trailing" constant="59" id="yke-r8-5JJ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="countLabel" destination="rZo-jW-SL4" id="ud8-BT-U1I"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
